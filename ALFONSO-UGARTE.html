@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Página didáctica sobre Alfonso Ugarte, héroe nacional del Perú" />
+<title>Alfonso Ugarte - Héroe Nacional del Perú</title>
+<link href="https://fonts.googleapis.com/css2?family=Patriot&family=Fredoka+One&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --color-bg-light: #f9f9f9;
+        --color-text-light: #222;
+        --color-bg-dark: #1e1e1e;
+        --color-text-dark: #f5f5f5;
+        --color-primary: #D91023; /* Rojo peruano */
+        --color-secondary: #FFD700;
+        --color-white: #FFFFFF;
+    }
+
+    body {
+        font-family: 'Comic Neue', cursive;
+        background-color: var(--color-bg-light);
+        color: var(--color-text-light);
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s, color 0.3s;
+        line-height: 1.6;
+    }
+
+    .dark-mode {
+        background-color: var(--color-bg-dark);
+        color: var(--color-text-dark);
+    }
+
+    header {
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-white) 50%, var(--color-primary) 100%);
+        color: var(--color-primary);
+        padding: 40px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFRUXGBoXGBgYGB0YGhgXFxcdGBUXGBcYHSggGBolHR0XITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0mICUtLS0tLy8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMBAwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xAA+EAABAwIEAwUGBAYBAwUAAAABAAIRAyEEEjFBBVFhBhMicYEykaGxwfAUI1LRB0JicuHxM0OCkiRTssLS/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDBAAF/8QALBEAAgICAgEDAwMEAwAAAAAAAAECEQMhEjFBBCJREzJhBXGRQoGhsdHw8f/aAAwDAQACEQMRAD8AxKSIAiUsOS3MLjpqkCrxaM0hZFBzUWkyTGqepRIvFkVJWBplMpqLJMxZW20wQrOHoExaBtKWUqAkTw9FoEi6NRp+GT/pCaTOkRzRblsc1nyNopCit3rgYkkbqYqnohmjH0/ZEY3aFjk5W7PRhBFqJbITwiyoO5KbQ7dAnhOwqZYnayF1Asg4TunonXonLUSiwbzzRXYy2TJCC4mUUtUGC6aTsAmAzKI7VMOUQj0qY9yaDoSRVJvCg+nurlRg1Vd0q3O+iVFZruYTkylUpFM2mQNFyikwyYJ5SpsTuZZNTCeS0SXZJrSplsDROEnEqaabopRC3JV8WIMxqFJ9Tfkg1XEg6Cee/kqqLJyZnVyCZhBbTJsrmXopUWx6qggYIUQkjGmOiZdyYxtYfDuLeSXd62WqALCRO3NU8RUIN7clm5t9DcEuwVF4NgT5dFOrcZdvmoPpgiQSD0+6q1cQ5h9oEeY+6WrdoZOlTKVZ5BIIjz5qo5w5K1XxLXXcB5kf5Kk5w2WqKozTd9kXOUQ5Rc5RzJxKLQc9Qc5QzJlyQbJZ0kktYx//Z');
+        opacity: 0.2;
+    }
+
+    header h1 {
+        font-family: 'Patriot', cursive;
+        font-size: 4em;
+        margin-bottom: 10px;
+        color: var(--color-primary);
+        text-shadow: 3px 3px 0 var(--color-white), 
+                     -1px -1px 0 var(--color-white), 
+                     1px -1px 0 var(--color-white), 
+                     -1px 1px 0 var(--color-white), 
+                     1px 1px 0 var(--color-white);
+        letter-spacing: 2px;
+        position: relative;
+        animation: titleGlow 2s infinite alternate;
+    }
+
+    @keyframes titleGlow {
+        from { text-shadow: 3px 3px 0 var(--color-white), 
+                          -1px -1px 0 var(--color-white), 
+                          1px -1px 0 var(--color-white), 
+                          -1px 1px 0 var(--color-white), 
+                          1px 1px 0 var(--color-white); }
+        to { text-shadow: 5px 5px 10px var(--color-secondary), 
+                        -3px -3px 10px var(--color-secondary), 
+                        3px -3px 10px var(--color-secondary), 
+                        -3px 3px 10px var(--color-secondary), 
+                        3px 3px 10px var(--color-secondary); }
+    }
+
+    header p {
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.5em;
+        color: var(--color-primary);
+        background-color: rgba(255, 255, 255, 0.7);
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .tricolor {
+        height: 15px;
+        background: linear-gradient(to right, var(--color-primary) 33%, var(--color-white) 33% 66%, var(--color-primary) 66%);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    main {
+        max-width: 960px;
+        margin: 30px auto;
+        background-color: white;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        transition: background-color 0.3s;
+        border: 3px solid var(--color-primary);
+    }
+
+    .dark-mode main {
+        background-color: #2c2c2c;
+        border-color: var(--color-secondary);
+    }
+
+    h1, h2 {
+        color: var(--color-primary);
+        font-family: 'Fredoka One', cursive;
+    }
+
+    h2 {
+        border-left: 6px solid var(--color-primary);
+        padding-left: 15px;
+        margin-top: 40px;
+        background: linear-gradient(to right, rgba(217, 16, 35, 0.1), transparent);
+        border-radius: 0 10px 10px 0;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 15px;
+        margin: 25px auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        display: block;
+        border: 3px solid var(--color-primary);
+        transition: transform 0.3s;
+    }
+
+    img:hover {
+        transform: scale(1.02);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(to right, var(--color-primary), var(--color-white), var(--color-primary));
+        color: var(--color-primary);
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    .toggle-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: var(--color-primary);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        z-index: 999;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        transition: all 0.3s;
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.1em;
+    }
+
+    .toggle-btn:hover {
+        background-color: #B0101C;
+        transform: scale(1.1);
+    }
+
+    blockquote {
+        background: rgba(217, 16, 35, 0.1);
+        border-left: 5px solid var(--color-primary);
+        margin: 25px 0;
+        padding: 20px;
+        font-style: italic;
+        border-radius: 0 15px 15px 0;
+        font-size: 1.1em;
+        position: relative;
+    }
+
+    blockquote::before {
+        content: '"';
+        font-size: 4em;
+        color: rgba(217, 16, 35, 0.2);
+        position: absolute;
+        left: 10px;
+        top: -20px;
+    }
+
+    .dark-mode blockquote {
+        background: rgba(100, 10, 20, 0.3);
+        color: #f5f5f5;
+    }
+
+    /* Acordeón mejorado */
+    .accordion {
+        background: linear-gradient(to right, var(--color-primary), #B0101C);
+        color: white;
+        cursor: pointer;
+        padding: 15px 25px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 1.2em;
+        margin: 20px 0 5px 0;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s;
+        font-family: 'Fredoka One', cursive;
+        position: relative;
+    }
+
+    .accordion::after {
+        content: '+';
+        position: absolute;
+        right: 20px;
+        font-size: 1.5em;
+        transition: transform 0.3s;
+    }
+
+    .accordion:hover {
+        background: linear-gradient(to right, #B0101C, #8A0C18);
+        transform: translateY(-2px);
+    }
+
+    .accordion.active {
+        background: linear-gradient(to right, #8A0C18, #6A0914);
+        border-radius: 10px 10px 0 0;
+    }
+
+    .accordion.active::after {
+        content: '-';
+        transform: rotate(180deg);
+    }
+
+    .panel {
+        padding: 0 25px;
+        background-color: var(--color-bg-light);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        border-radius: 0 0 10px 10px;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+    }
+
+    .dark-mode .panel {
+        background-color: #3a3a3a;
+    }
+
+    /* Decoración especial */
+    .peru-flag-decoration {
+        height: 30px;
+        background: linear-gradient(90deg, 
+            var(--color-primary) 0%, 
+            var(--color-primary) 33%, 
+            var(--color-white) 33%, 
+            var(--color-white) 66%, 
+            var(--color-primary) 66%, 
+            var(--color-primary) 100%);
+        margin: 20px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Imágenes en base64 */
+    .img-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .img-container::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    }
+</style>
+</head>
+<body>
+<button class="toggle-btn" onclick="toggleMode()" aria-label="Cambiar entre modo claro y oscuro">🌙/☀️</button>
+
+<header>
+    <h1>ALFONSO UGARTE</h1>
+    <p>El héroe que defendió la bandera peruana con su vida</p>
+</header>
+
+<div class="tricolor"></div>
+
+<main>
+    <div class="img-container">
+        <img src="https://www.infobae.com/resizer/v2/3AAH4HVTQRHFNBADGO5T6XXVSU.jpg?auth=2b5473048d136f475a53f522db1ee76eca22e540e68bb530711b56f1f9477757&smart=true&width=1200&height=900&quality=85" 
+             alt="Retrato de Alfonso Ugarte" 
+             class="hero-image">
+    </div>
+
+    <article>
+        <section id="biografia">
+            <h2>Biografía</h2>
+            <p>
+                Alfonso Ugarte Vernal nació en Iquique el 13 de julio de 1847, en el seno de una familia acomodada dedicada al comercio y la minería. Desde joven mostró gran talento para los negocios, heredando y expandiendo los negocios familiares. Sin embargo, su vida cambiaría para siempre cuando estalló la Guerra del Pacífico.
+            </p>
+            <p>
+                Aunque no era militar de carrera, Ugarte sintió el llamado del deber patriótico. Con su fortuna personal financió y organizó batallones para defender al Perú, demostrando que el amor a la patria trasciende profesiones y condiciones sociales.
+            </p>
+        </section>
+
+        <section id="contexto-historico">
+            <h2>Contexto Histórico</h2>
+            <p>
+                La Guerra del Pacífico (1879-1883) enfrentó a Chile contra la alianza de Perú y Bolivia. El conflicto tuvo como trasfondo el control de territorios ricos en recursos minerales, especialmente el salitre, vital para la economía mundial en aquella época. 
+            </p>
+            <p>
+                Tarapacá y Arica, zonas donde Ugarte vivió y combatió, eran regiones estratégicas para Perú por su riqueza y ubicación. En este contexto, la defensa de estas plazas se volvió crucial para la resistencia peruana frente al avance chileno. La guerra marcó una profunda crisis política, social y económica en Perú que cambió su historia para siempre.
+            </p>
+        </section>
+
+        <section id="participacion-guerra">
+            <h2>Participación en la Guerra del Pacífico</h2>
+            <p>
+                Cuando estalló la Guerra del Pacífico en 1879, Alfonso Ugarte decidió aplazar un viaje a Europa y entregarse de lleno a la defensa de su país. Con sus propios recursos, organizó y financió el "Batallón Iquique N°1", integrado mayormente por obreros, artesanos y ciudadanos comunes, destacando así su compromiso con la población civil.
+            </p>
+            <p>
+                Nombrado coronel, Ugarte fue enviado a defender la plaza de Arica, una posición clave en el frente sur peruano. Allí se unió a otros héroes como el coronel Francisco Bolognesi, quienes decidieron resistir hasta el último cartucho, conscientes de la desigualdad de fuerzas frente al ejército chileno.
+            </p>
+
+            <img src="https://perusumaq.com/wp-content/uploads/2017/06/alfonsougarte.jpg" 
+                alt="Vista del Morro de Arica" 
+                loading="lazy">
+        </section>
+
+        <section id="salto-morro">
+            <h2>El salto del Morro</h2>
+            <p>
+                El 7 de junio de 1880, durante la batalla que definió la caída de Arica, las fuerzas chilenas lograron superar las defensas peruanas. En ese momento crítico, Alfonso Ugarte, montado en su caballo y con la bandera nacional en sus manos, prefirió saltar desde el Morro de Arica para evitar que la enseña patrimonial cayera en manos enemigas. 
+            </p>
+            <p>
+                Este acto heroico simboliza el amor y la entrega absoluta a la patria. A pesar de que existen varias versiones sobre su destino final, todas coinciden en que Ugarte murió defendiendo el honor del Perú, dejando un legado imborrable en la memoria nacional.
+            </p>
+
+            <button class="accordion">Leer más sobre la Batalla de Arica</button>
+            <div class="panel">
+                <p>
+                    La Batalla de Arica fue uno de los combates más importantes de la Guerra del Pacífico. La plaza estaba defendida por aproximadamente 1,600 soldados peruanos, mientras que las fuerzas chilenas sumaban más de 5,000. 
+                </p>
+                <p>
+                    Durante la madrugada del 7 de junio, el ejército chileno lanzó un ataque sorpresivo que logró romper las defensas. Los peruanos resistieron con valentía, pero la superioridad numérica y armamentística chilena fue decisiva. La caída de Arica significó una gran pérdida para Perú, pero la resistencia de héroes como Ugarte y Bolognesi quedó inmortalizada.
+                </p>
+            </div>
+        </section>
+
+        <section id="legado">
+            <h2>Su legado eterno</h2>
+            <p>
+                Alfonso Ugarte es hoy un símbolo del patriotismo y el sacrificio por el Perú. Su nombre está presente en colegios, calles, plazas y monumentos a lo largo de todo el país. En 1980, sus restos fueron trasladados solemnemente a la Cripta de los Héroes en el Cementerio Presbítero Maestro de Lima, donde descansan junto a otros mártires de la patria.
+            </p>
+            <p>
+                Más allá de la historia, su figura ha inspirado numerosas expresiones artísticas: pinturas, esculturas, canciones y obras literarias que celebran su entrega y valentía. Cada 7 de junio, el Perú conmemora su heroísmo recordando su salto desde el Morro como un acto supremo de amor a la nación.
+            </p>
+
+            <blockquote>
+                "No hay mayor acto de amor que dar la vida por su país." — Reflexión patriótica sobre Alfonso Ugarte
+            </blockquote>
+        </section>
+
+        <section id="importancia-actual">
+            <h2>Importancia histórica y enseñanza actual</h2>
+            <p>
+                Alfonso Ugarte representa a un ciudadano común que se levantó ante la adversidad para defender a su país, sin ser militar profesional. En tiempos donde el Perú enfrentaba una grave crisis nacional, su ejemplo de dignidad y entrega resalta como un faro de inspiración.
+            </p>
+            <p>
+                Su historia nos invita a reflexionar sobre el valor del compromiso cívico y la responsabilidad individual frente a los retos colectivos. Hoy, cuando la identidad nacional puede sentirse diluida por múltiples factores, recordar héroes como Ugarte es fundamental para fortalecer los valores de justicia, libertad y soberanía.
+            </p>
+
+            <button class="accordion">Más sobre el patriotismo y legado cultural</button>
+            <div class="panel">
+                <p>
+                    El patriotismo de Alfonso Ugarte trasciende su época y se ha convertido en un símbolo para las nuevas generaciones. Su sacrificio es recordado en el sistema educativo peruano, donde su vida y hazañas se estudian como ejemplo de amor a la patria.
+                </p>
+                <p>
+                    Además, la bandera que defendió representa no solo un pedazo de tela, sino la historia, la cultura y la identidad del pueblo peruano. En un mundo globalizado, mantener viva esta llama es esencial para preservar la cohesión social y el respeto por las raíces.
+                </p>
+            </div>
+
+            <img src="https://www.peru.travel/Contenido/Uploads/bandera-peru_637624961806259637.jpg" 
+                alt="Bandera del Perú" 
+                loading="lazy">
+        </section>
+    </article>
+</main>
+
+<footer>
+    <p>© 2025 Página dedicada a la memoria de Alfonso Ugarte<br />Contenido educativo sobre historia peruana</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Función para cambiar entre modo claro/oscuro
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Guardar preferencia en localStorage
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+        }
+        
+        // Verificar preferencia guardada
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+        
+        // Asignar evento al botón
+        const toggleBtn = document.querySelector('.toggle-btn');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', toggleMode);
+        }
+        
+        // Funcionalidad acordeón
+        const acc = document.querySelectorAll(".accordion");
+        acc.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
